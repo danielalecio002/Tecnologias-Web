@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>SB Admin 2 - Login</title>
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <!--CSS para a tela de login-->
+    <style>
+        .container{
+          width: 500px;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 10px;
+          background-color: white;
+          margin-top: 90px;
+        }
+        button{
+          width: 200px;
+          margin-bottom: 50px;
+        }
+    </style>
+  </head>
+
+  <body class="bg-gradient-primary">
+    <div class="container">
+      <!-- Outer Row -->
+              <div class="item1">
+                <img src="Imagens/login.png" />
+              </div>
+              <div class="item2">
+                <form class="user" method="POST" action="login.php">
+                  <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"  aria-describedby="emailHelp"  placeholder="Enter With User ..."  name="usuario"  />
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="senha"/>
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Enter
+                  </button>
+                </form>  
+              </div>
+                
+    </div>
+   
+  </body>
+</html>

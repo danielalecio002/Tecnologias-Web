@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="Container" class="formulario">
+        <header>
+            <h1>Olimpiada de programação da UFC</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>            
+                <li id="login"><a href="login.html">Login</a></li>
+            </ul>
+            <div id="button">
+                <li><a href="forms.html">Registrar</a></li>
+            </div>
+        </nav>
+        <div id="conteudo_cadastrar">
+            <h1>Formulário de cadastro</h1>
+            <form action="resultado.html" method="POST">                  
+                    
+                    <label for="fname">Nome:</label> 
+                    <input class ="tipo1"type="text" name="nome_forms" id="fname"><br>
+                         
+                    <label  for="femail">Email:</label>
+                    <input class="tipo1" type="text" name="email_forms" id="femail"><br> 
+                        
+                    <label for="fsenha">Senha:</label>
+                    <input class="tipo1" type="password" name="senha_forms" id="fsenha"><br>  
+                            
+                            
+                    Modalidade:                  
+                    <select name="modalidades">
+                            <option value="modalidade 1">Modalidade 1</option>
+                            <option value="modalidade 2">Modalidade 2</option>
+                            <option value="modalidade 3">Modalidade 3</option>
+                            <option value="modalidade 4">Modalidade 4</option> 
+                    </select>
+                            
+                            
+                    Linguagens:
+                    <br>
+                    <input type="checkbox" name="linguagens_forms"> Java <br> 
+                    <input type="checkbox" name="linguagens_forms"> C <br> 
+                    <input type="checkbox" name="linguagens_forms"> C++ <br> 
+                    <input type="checkbox" name="linguagens_forms"> Python <br> 
+                    
+                    Escolha o período:<br>
+                    <input class = "radio" type="radio" name="periodo_forms" value="Manha"> Manhã <br>  
+                    <input class = "radio" type="radio" name="periodo_forms" value="tarde"> Tarde <br>
+                    <input class = "radio"type="radio" name="periodo_forms" value="Noite"> Noite <br>
+                                
+                    Apresentação:<br>
+                    <textarea name= "msg_forms" rows="5" cols="55"></textarea><br>
+                    <div id="button2">
+                        <input class = "enviar" type="submit" value="Enviar"><br>
+                    </div>
+                      
+            </form>
+        </div>    
+    <footer>
+        <p>&copy; 2021 Daniel Alécio - Tecnologias WEB</p>
+    </footer>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flappy.css">
+
+    <style>
+        body {
+            color: white;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="conteudo">
+        <h1>Flappy Bird</h1>
+        <h1 class="destaque">Configuracão do Jogo</h1>
+
+        <form class="form">
+            <div id=form>
+                <label for="nomej" class="form-label" >Nome do Jogador</label>
+                <input type="text" class="form-control" id="nomej" name="nome" value="Bird">
+                <br>
+
+
+                Cenário:
+                <div id="cenario">
+                    
+                    <input class="form-check-input space" type="radio" name="cenario" value="Noturno" id="r1_cenario">
+                    <label class="form-check-label space " for="r1_cenario"> Noturno</label>
+
+                    <input class="form-check-input space" type="radio" name="cenario" value="Diurno" id="r2_cenario"
+                        checked>
+                    <label class="form-check-label space" for="r2_cenario"> Diurno</label>
+                    <br><br>
+                </div>
+                Intervalo entre abertura dos canos:
+                <div id="abertura">
+                    <input class="form-check-input radio space" type="radio" name="abertura" value="Fácil" id="r1_abertura">
+                    <label class="form-check-label space" for="r1_abertura"> Fácil</label>
+
+                    <input class="form-check-input space" type="radio" name="abertura" value="Médio" id="r2_abertura"
+                        checked>
+                    <label class="form-check-label space" for="r2_abertura"> Médio</label>
+
+                    <input class="form-check-input space" type="radio" name="abertura" value="Difícil" id="r3_abertura">
+                    <label class="form-check-label space" for="r3_abertura"> Difícil</label>
+                    <br><br>
+                </div>
+                Distância entre os canos:
+                <div id="distancia">
+                    <input class="form-check-input space" type="radio" name="distancia" value="Fácil" id="dcanos1">
+                    <label class="form-check-label space" for="dcanos1"> Fácil</label>
+
+                    <input class="form-check-input space" type="radio" name="distancia" value="Médio" id="dcanos2"
+                        checked>
+                    <label class="form-check-label space" for="dcanos2"> Médio</label>
+
+                    <input class="form-check-input space" type="radio" name="distancia" value="Difícil" id="dcanos3">
+                    <label class="form-check-label space" for="dcanos3"> Difícil</label>
+                    <br>
+                    <br>
+                </div>
+                <div id="velocidade">
+                    <label for="velocidade" class="form-label">Velocidade</label>
+                    <input type="range" class="form-range" id="customRange1" min="1" value = "3" max="10">
+                    <br>
+                    <br>
+                </div>
+                <div id="personagens">
+                    <select id="personagens" class="form-select" aria-label="Default select example">
+                        <option selected>Personagem</option>
+                        <option value="img/bird.png" selected>Red</option>
+                        <option value="img/Bomba.png">Bomb</option>
+                        <option value="img/passaro.png">Bird</option>
+                    </select>
+                    <br>
+                </div>
+                Tipo do jogo:
+                <div id="tipodojogo">
+                    <input class="form-check-input space" type="radio" name="tipojogo" value="Treino" id="r1_tipo">
+                    <label class="form-check-label space" for="r1_tipo"> Treino</label>
+
+                    <input class="form-check-input space" type="radio" name="tipojogo" value="Real" id="r2_tipo"
+                        checked>
+                    <label class="form-check-label space" for="r2_tipo"> Real</label>
+                    <br>
+                    <br>
+                </div>
+                Velocidade dos personagens:
+                <div id="veldopersonagem">
+                    <input class="form-check-input space" type="radio" name="velPers" value="Baixa" id="vel1">
+                    <label class="form-check-label space" for="vel1"> Baixa</label>
+
+                    <input class="form-check-input space" type="radio" name="velPers" value="Média" id="vel2" checked>
+                    <label class="form-check-label space" for="vel2"> Média</label>
+
+                    <input class="form-check-input space" type="radio" name="velPers" value="Rápida" id="vel3">
+                    <label class="form-check-label space" for="vel3"> Rápida</label>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+            Pontuação:
+            <div id="pontuacao">
+                <input class="form-check-input space" type="radio" name="pontuacao" value="1" id="pont1" checked>
+                <label class="form-check-label space" for="pont1"> 1</label>
+
+                <input class="form-check-input space" type="radio" name="pontuacao" value="10" id="pont2">
+                <label class="form-check-label space" for="pont2"> 10</label>
+
+                <input class="form-check-input space" type="radio" name="pontuacao" value="100" id="pont3">
+                <label class="form-check-label space" for="pont3"> 100</label>
+                <br>
+                <br>
+            </div>
+            <div id="botao" class="centraliza">
+                <input type="button" id="enviar" class="btn btn-primary" value="Iniciar" />
+            </div>
+            <br>
+            <br>
+        </form>
+        <div wm-flappy>
+
+            <div class="tela">
+                <a href="index.html?novojogo" class="btn btn-primary">Novo Jogo</a>
+                <div class="result1"> </div><br>
+                <div class="result2"> </div>
+            </div>
+            <div id="nome">
+            </div>
+
+
+
+            <!-- 
+        <img class="passaro" src="img/passaro.png" alt="passaro">
+            <div class="par-de-barreiras">
+                <div class="barreira">
+                    <div class="corpo"> </div>
+                    <div class="borda"></div>
+                </div>
+                <div class="barreira">
+                    <div class="borda"> </div>
+                    <div class="corpo"></div>
+                </div>
+            </div>
+            <div class="progresso"> 10 </div>   -->
+        </div>
+    </div>
+
+    <script src="js/flappy.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Regular.ttf') format('truetype');
+    font-family: 'Pixel';
+    src: url("fontes/Pixel.ttf");
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #0D262D;
+    color: #fff;
+    height: 100%;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100%;
+    margin: 0 auto  ;
+}
+
+.space {
+    margin-left: 15px;
+}
+.centraliza{
+    margin-left: 100px;
+}
+[wm-flappy] {
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 470px;
+    width: 1200px;
+    margin: 10px;
+    background-color: deepskyblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+}
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border: 2px solid #000;
+}
+.barreira .corpo {
+    height: 40px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+/*Noturno*/
+
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 100;
+}
+
+/*Tela que abre ao colidir com opção de restart e sair*/
+.tela{
+    display: flex;
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-color: #639301;
+    z-index: 1;
+    top: 135px;
+    left: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border:solid 2px black;
+    
+}
+a{
+    background-color:#A5E82E;
+    line-height: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    margin:20px ;
+    
+
+}
+
+
+
+.modonoturno{
+    background-image: url("../img/noite.jpg");
+}#nome{
+    display: inline;
+    position: absolute;
+    height: 35px;
+    width: 300px;
+    color:#A5E82E;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    z-index: 1;
+    line-height: 30px;
+    font-weight: bold;
+      
+
+}
+h1 {
+    color:#A5E82E;
+}
+.destaque{
+    color: blanchedalmond;
+}
+
